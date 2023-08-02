@@ -5,6 +5,10 @@ get_header();
 
     <main id="primary" class="site-main">
         <section class="banner">
+            <video muted autoplay loop id="myVideo" poster="<?php echo get_template_directory_uri() . '/assets/images/banner.png'?>">
+                <source src="<?php echo get_stylesheet_directory_uri() . '/asset/video/Studio-Koukaki-vidéo.mp4'?>" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
             <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
         </section>
         <section id="#story" class="story">

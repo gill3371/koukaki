@@ -1,11 +1,14 @@
 .banner {
-  background-image: url("./assets/images/banner.png");
   min-height: 806px;
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
+  video {
+    position: relative;
+  }
   img {
+    position: absolute;
     margin-top: -10%;
     width: 50%;
   }
@@ -138,7 +141,7 @@
   }
 }
 
-@media all and(max-width: #{$breakpoint__laptop}) {
+@media all and (max-width: #{$breakpoint__laptop}) {
   .story {
     &__article {
       &::before {
@@ -153,7 +156,7 @@
   }
 }
 
-@media all and(max-width: #{$breakpoint__tablet}) {
+@media all and (max-width: #{$breakpoint__tablet}) {
   .story {
     &__article {
       &::before {
@@ -174,7 +177,7 @@
   }
 }
 
-@media all and(max-width: #{$breakpoint__small_tablet}) {
+@media all and (max-width: #{$breakpoint__small_tablet}) {
   .story {
     h2{
       &::before {
