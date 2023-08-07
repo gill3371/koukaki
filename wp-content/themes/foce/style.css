@@ -728,6 +728,9 @@ textarea {
   flex-direction: column;
   align-items: center;
 }
+.story h2 {
+  overflow: hidden;
+}
 .story h2::before {
   content: url("./assets/images/sunflower_leaves.png");
   position: absolute;

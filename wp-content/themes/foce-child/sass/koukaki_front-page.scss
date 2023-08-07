@@ -1,0 +1,38 @@
+.banner {
+    opacity: 0;
+}
+
+.story {
+    opacity: 0;
+    h2 {
+        &::after {
+            width: 155px;
+            height: 154px;
+            animation: animFlower 5000ms linear infinite;
+        }
+    }
+    &__article {
+        &::after {
+            width: 188px;
+            height: 188px;
+            animation: animFlower 5000ms linear infinite;
+        }
+    }
+}
+#studio {
+    opacity: 0;
+}
+
+.animDebut {
+    animation: fadeDebut 2500ms forwards;
+  }
+  
+.animDebutDown {
+    animation: fadeDebutDown 2500ms forwards;
+  }
+
+.titre {
+    display: block;
+    animation: translateTitle 2000ms 4000ms;
+  }
+  

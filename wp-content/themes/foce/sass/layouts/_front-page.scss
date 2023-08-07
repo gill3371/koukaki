@@ -19,7 +19,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  h2{
+  h2 {
+    overflow: hidden;
     &::before {
       content: url('./assets/images/sunflower_leaves.png');
       position: absolute;
@@ -34,7 +35,6 @@
       top: 6em;
     }
   }
-
   &__article {
     display: flex;
     flex-direction: column;

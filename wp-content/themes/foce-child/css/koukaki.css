@@ -1,0 +1,72 @@
+@keyframes fadeDebutDown {
+  from {
+    opacity: 0;
+    transform: translate(0px, -200px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+@keyframes fadeDebut {
+  from {
+    opacity: 0;
+    transform: translate(0px, 300px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+@keyframes translateTitle {
+  from {
+    transform: translate(0px, 100%);
+  }
+  to {
+    transform: translate(0px);
+  }
+}
+@keyframes animFlower {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 180deg;
+  }
+}
+.banner {
+  opacity: 0;
+}
+
+.story {
+  opacity: 0;
+}
+.story h2::after {
+  width: 155px;
+  height: 154px;
+  animation: animFlower 5000ms linear infinite;
+}
+.story__article::after {
+  width: 188px;
+  height: 188px;
+  animation: animFlower 5000ms linear infinite;
+}
+
+#studio {
+  opacity: 0;
+}
+
+.animDebut {
+  animation: fadeDebut 2500ms forwards;
+}
+
+.animDebutDown {
+  animation: fadeDebutDown 2500ms forwards;
+}
+
+.titre {
+  display: block;
+  animation: translateTitle 2000ms 4000ms;
+}
+
+/*# sourceMappingURL=koukaki.css.map */
