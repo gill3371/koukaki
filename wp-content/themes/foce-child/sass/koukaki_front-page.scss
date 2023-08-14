@@ -1,9 +1,9 @@
 .banner {
-    opacity: 0;
+    // opacity: 0;
 }
 
 .story {
-    opacity: 0;
+    // opacity: 0;
     h2 {
         &::after {
             width: 155px;
@@ -17,10 +17,13 @@
             height: 188px;
             animation: animFlower 5000ms linear infinite;
         }
+        p {
+            // animation: textStatic 2500ms forwards;
+        }
     }
 }
 #studio {
-    opacity: 0;
+    // opacity: 0;
 }
 
 .animDebut {
@@ -32,7 +35,43 @@
   }
 
 .titre {
-    display: block;
-    animation: translateTitle 2000ms 4000ms;
+    display: inline-block;
+    animation: translateTitle 1000ms 1500ms backwards;
   }
   
+.titreb {
+    display: inline-block;
+    animation: translateTitle 1000ms 2000ms backwards;
+  }
+
+.site-footer {
+    display: flex;
+    flex-direction: column;
+    padding-top: 11em;
+    &::after {
+        bottom: 26em;
+    }
+    #nomination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12rem;
+    h3 {
+        display: inline-block;
+        height: 200px;
+        font-size: 2rem;
+        line-height: 2.3rem;
+        padding-top: 40px;
+        background-image: url("/koukaki/wp-content/themes/foce-child/asset/images/orange_nomination_bg.png") ;
+    }
+    img {
+        display: inline-block;
+        height: 100%;
+    }
+    }
+    ul {
+        &::after {
+            bottom: -36em;
+        }
+}
+}

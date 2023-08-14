@@ -20,9 +20,18 @@
     }
   }
 
+@keyframes textStatic {
+    from {
+      transform : translate(0px,-300px);
+    }
+    to {
+      transform : translate(0px,-00px);
+    }
+  }
+
   @keyframes translateTitle {
     from {
-      transform : translate(0px,100%);
+      transform : translate(0px,200px);
     }
     to {
       transform : translate(0px);

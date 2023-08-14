@@ -18,9 +18,17 @@
     transform: translate(0px);
   }
 }
+@keyframes textStatic {
+  from {
+    transform: translate(0px, -300px);
+  }
+  to {
+    transform: translate(0px, 0px);
+  }
+}
 @keyframes translateTitle {
   from {
-    transform: translate(0px, 100%);
+    transform: translate(0px, 200px);
   }
   to {
     transform: translate(0px);
@@ -34,13 +42,6 @@
     rotate: 180deg;
   }
 }
-.banner {
-  opacity: 0;
-}
-
-.story {
-  opacity: 0;
-}
 .story h2::after {
   width: 155px;
   height: 154px;
@@ -51,11 +52,6 @@
   height: 188px;
   animation: animFlower 5000ms linear infinite;
 }
-
-#studio {
-  opacity: 0;
-}
-
 .animDebut {
   animation: fadeDebut 2500ms forwards;
 }
@@ -65,8 +61,43 @@
 }
 
 .titre {
-  display: block;
-  animation: translateTitle 2000ms 4000ms;
+  display: inline-block;
+  animation: translateTitle 1000ms 1500ms backwards;
+}
+
+.titreb {
+  display: inline-block;
+  animation: translateTitle 1000ms 2000ms backwards;
+}
+
+.site-footer {
+  display: flex;
+  flex-direction: column;
+  padding-top: 11em;
+}
+.site-footer::after {
+  bottom: 26em;
+}
+.site-footer #nomination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12rem;
+}
+.site-footer #nomination h3 {
+  display: inline-block;
+  height: 200px;
+  font-size: 2rem;
+  line-height: 2.3rem;
+  padding-top: 40px;
+  background-image: url("/koukaki/wp-content/themes/foce-child/asset/images/orange_nomination_bg.png");
+}
+.site-footer #nomination img {
+  display: inline-block;
+  height: 100%;
+}
+.site-footer ul::after {
+  bottom: -36em;
 }
 
 /*# sourceMappingURL=koukaki.css.map */
