@@ -1,17 +1,4 @@
 .banner {
-  min-height: 806px;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  video {
-    position: relative;
-  }
-  img {
-    position: absolute;
-    margin-top: -10%;
-    width: 50%;
-  }
 }
 
 .story {
@@ -124,7 +111,7 @@
     }
   }
 
-  > div {
+  .textStudio {
     display: flex;
     justify-content: space-between;
     width: 66.66%;

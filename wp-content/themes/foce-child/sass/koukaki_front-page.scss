@@ -1,9 +1,34 @@
 .banner {
-    // opacity: 0;
+    .bannerDiv {
+        min-height: 806px;
+        background-size: cover;      
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+    }
+    video {
+        position: relative;
+    }
+    img {
+    position: absolute;
+    margin-top: -1%;
+    width: 50%;
+    }
 }
 
+.fadeDebutDown {
+    animation: fadeDebutDown 2500ms forwards;
+  }
+
 .story {
-    // opacity: 0;
+    .storyDiv {
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
     h2 {
         &::after {
             width: 155px;
@@ -17,23 +42,23 @@
             height: 188px;
             animation: animFlower 5000ms linear infinite;
         }
-        p {
-            // animation: textStatic 2500ms forwards;
-        }
+        // p {
+        //     animation: textStatic 2500ms forwards;
+        // }
     }
 }
-#studio {
-    // opacity: 0;
+#studio {   
+    .studioDiv {
+    opacity: 0;
+    position: relative;
+    margin-top: 3em; 
+    }  
 }
 
 .animDebut {
     animation: fadeDebut 2500ms forwards;
   }
   
-.animDebutDown {
-    animation: fadeDebutDown 2500ms forwards;
-  }
-
 .titre {
     display: inline-block;
     animation: translateTitle 1000ms 1500ms backwards;
@@ -66,7 +91,8 @@
     }
     img {
         display: inline-block;
-        height: 100%;
+        height: 18%;
+        width: 18%;
     }
     }
     ul {

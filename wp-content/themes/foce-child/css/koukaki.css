@@ -42,6 +42,34 @@
     rotate: 180deg;
   }
 }
+.banner .bannerDiv {
+  min-height: 806px;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+.banner video {
+  position: relative;
+}
+.banner img {
+  position: absolute;
+  margin-top: -1%;
+  width: 50%;
+}
+
+.fadeDebutDown {
+  animation: fadeDebutDown 2500ms forwards;
+}
+
+.story .storyDiv {
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
 .story h2::after {
   width: 155px;
   height: 154px;
@@ -52,12 +80,15 @@
   height: 188px;
   animation: animFlower 5000ms linear infinite;
 }
-.animDebut {
-  animation: fadeDebut 2500ms forwards;
+
+#studio .studioDiv {
+  opacity: 0;
+  position: relative;
+  margin-top: 3em;
 }
 
-.animDebutDown {
-  animation: fadeDebutDown 2500ms forwards;
+.animDebut {
+  animation: fadeDebut 2500ms forwards;
 }
 
 .titre {
@@ -94,7 +125,8 @@
 }
 .site-footer #nomination img {
   display: inline-block;
-  height: 100%;
+  height: 18%;
+  width: 18%;
 }
 .site-footer ul::after {
   bottom: -36em;

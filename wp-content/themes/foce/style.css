@@ -706,22 +706,6 @@ textarea {
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
-.banner {
-  min-height: 806px;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.banner video {
-  position: relative;
-}
-.banner img {
-  position: absolute;
-  margin-top: -10%;
-  width: 50%;
-}
-
 .story {
   position: relative;
   display: flex;
@@ -830,19 +814,19 @@ textarea {
   right: 1em;
   top: 1.2em;
 }
-#studio > div {
+#studio .textStudio {
   display: flex;
   justify-content: space-between;
   width: 66.66%;
   margin: auto;
 }
-#studio > div::before {
+#studio .textStudio::before {
   content: url("./assets/images/trple-leaf.png");
   position: absolute;
   left: calc(50% - 17.225px);
   top: 40%;
 }
-#studio > div p {
+#studio .textStudio p {
   width: 44.5%;
 }
 
