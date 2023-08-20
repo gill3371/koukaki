@@ -42,6 +42,23 @@
     rotate: 180deg;
   }
 }
+@keyframes floatingEffect {
+  0% {
+    transform: translate(-5px, 28px);
+  }
+  25% {
+    transform: translate(-7px, -20px);
+  }
+  50% {
+    transform: translate(-15px, 22px);
+  }
+  75% {
+    transform: translate(-21px, -20px);
+  }
+}
+.banner {
+  background-image: url("../assets/images/banner.png");
+}
 .banner .bannerDiv {
   min-height: 806px;
   background-size: cover;
@@ -50,13 +67,19 @@
   align-items: center;
   opacity: 0;
 }
-.banner video {
+.banner .bannerDiv video {
   position: relative;
+}
+@media all and (max-width: 1192px) {
+  .banner .bannerDiv video {
+    display: none;
+  }
 }
 .banner img {
   position: absolute;
-  margin-top: -1%;
+  margin-top: -8%;
   width: 50%;
+  animation: floatingEffect 5000ms infinite alternate-reverse linear;
 }
 
 .fadeDebutDown {
@@ -80,6 +103,14 @@
   height: 188px;
   animation: animFlower 5000ms linear infinite;
 }
+.story__article p {
+  animation: textStatic 2500ms both;
+}
+
+.animStoryTitle {
+  display: inline-block;
+  animation: translateTitle 1000ms 1500ms backwards;
+}
 
 #studio .studioDiv {
   opacity: 0;
@@ -91,12 +122,12 @@
   animation: fadeDebut 2500ms forwards;
 }
 
-.titre {
+.animTitle_A {
   display: inline-block;
   animation: translateTitle 1000ms 1500ms backwards;
 }
 
-.titreb {
+.animTitle_B {
   display: inline-block;
   animation: translateTitle 1000ms 2000ms backwards;
 }

@@ -706,6 +706,19 @@ textarea {
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
+.banner {
+  background-image: url("./assets/images/banner.png");
+  min-height: 806px;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner img {
+  margin-top: -10%;
+  width: 50%;
+}
+
 .story {
   position: relative;
   display: flex;

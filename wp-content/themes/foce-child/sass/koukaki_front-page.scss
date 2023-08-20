@@ -1,4 +1,5 @@
 .banner {
+    background-image: url("../assets/images/banner.png");
     .bannerDiv {
         min-height: 806px;
         background-size: cover;      
@@ -6,16 +7,20 @@
         justify-content: center;
         align-items: center;
         opacity: 0;
+        video {
+            position: relative;
+            @media all and (max-width: 1192px) {
+                display: none;
+            }                
+            }
+        }
+        img {
+        position: absolute;
+        margin-top: -8%;
+        width: 50%;
+        animation: floatingEffect 5000ms infinite alternate-reverse linear;
+        }
     }
-    video {
-        position: relative;
-    }
-    img {
-    position: absolute;
-    margin-top: -1%;
-    width: 50%;
-    }
-}
 
 .fadeDebutDown {
     animation: fadeDebutDown 2500ms forwards;
@@ -42,29 +47,35 @@
             height: 188px;
             animation: animFlower 5000ms linear infinite;
         }
-        // p {
-        //     animation: textStatic 2500ms forwards;
-        // }
+        p {
+            animation: textStatic 2500ms both;
+        }
     }
 }
+
+.animStoryTitle {
+    display: inline-block;
+    animation: translateTitle 1000ms 1500ms backwards;
+  }
+
 #studio {   
     .studioDiv {
     opacity: 0;
     position: relative;
     margin-top: 3em; 
-    }  
+}  
 }
 
 .animDebut {
     animation: fadeDebut 2500ms forwards;
   }
   
-.titre {
+.animTitle_A {
     display: inline-block;
     animation: translateTitle 1000ms 1500ms backwards;
   }
   
-.titreb {
+.animTitle_B {
     display: inline-block;
     animation: translateTitle 1000ms 2000ms backwards;
   }
