@@ -44,20 +44,20 @@
 }
 @keyframes floatingEffect {
   0% {
-    transform: translate(-5px, 28px);
+    transform: translate(-18px, 13px);
   }
   25% {
-    transform: translate(-7px, -20px);
+    transform: translate(0px, -28px);
   }
   50% {
-    transform: translate(-15px, 22px);
+    transform: translate(-27px, 4px);
   }
   75% {
-    transform: translate(-21px, -20px);
+    transform: translate(-21px, -11px);
   }
 }
 .banner {
-  background-image: url("../assets/images/banner.png");
+  display: block;
 }
 .banner .bannerDiv {
   min-height: 806px;
@@ -66,6 +66,11 @@
   justify-content: center;
   align-items: center;
   opacity: 0;
+}
+.banner .bannerDiv::after {
+  content: "";
+  background-image: url("../asset/images/banner.png");
+  background-size: cover;
 }
 .banner .bannerDiv video {
   position: relative;
@@ -98,6 +103,10 @@
   height: 154px;
   animation: animFlower 5000ms linear infinite;
 }
+.story #characters {
+  flex-direction: column;
+  margin: 0em;
+}
 .story__article::after {
   width: 188px;
   height: 188px;
@@ -109,7 +118,7 @@
 
 .animStoryTitle {
   display: inline-block;
-  animation: translateTitle 1000ms 1500ms backwards;
+  animation: translateTitle 1000ms 500ms backwards;
 }
 
 #studio .studioDiv {
@@ -124,12 +133,12 @@
 
 .animTitle_A {
   display: inline-block;
-  animation: translateTitle 1000ms 1500ms backwards;
+  animation: translateTitle 1000ms 500ms backwards;
 }
 
 .animTitle_B {
   display: inline-block;
-  animation: translateTitle 1000ms 2000ms backwards;
+  animation: translateTitle 1000ms 1000ms backwards;
 }
 
 .site-footer {
@@ -161,6 +170,24 @@
 }
 .site-footer ul::after {
   bottom: -36em;
+}
+
+.swiper {
+  width: 125%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
 }
 
 /*# sourceMappingURL=koukaki.css.map */

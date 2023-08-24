@@ -5,6 +5,22 @@ let s = skrollr.init();
 const tagBody= document.querySelector("body");
 tagBody.style.height = null;
 
+// Initialisation de Swiper
+  var swiper = new Swiper(".mySwiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: false,
+    },
+  });
+
+
 // // Déclaration des variables
 let sectionBanner = document.querySelector(".banner");
 let divBanner = document.querySelector(".bannerDiv");
