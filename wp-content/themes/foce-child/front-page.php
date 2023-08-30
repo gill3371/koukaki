@@ -10,10 +10,8 @@ get_header();
                 <source src="<?php echo get_stylesheet_directory_uri() . '/asset/video/Studio-Koukaki-vidéo.mp4' ?>" type="video/mp4">
                 Your browser does not support HTML5 video.
             </video>
-            <img class="animFloating" src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?>" alt="logo Fleurs d'oranger & chats errants"
-            data-bottom-top="transform:translate3d(0, -50px, 0)"
-            data-top-bottom="transform:translate3d(0, 300px, 0)"
-            >
+            <img class="imgBanner" src="<?php echo get_stylesheet_directory_uri() . '/asset/images/banner.png' ?>" alt="Image fond bannière Koukaki">
+            <img class="animFloating imgLogo" src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?>" alt="logo Fleurs d'oranger & chats errants" data-bottom-top="transform:translate3d(0, -50px, 0)" data-top-bottom="transform:translate3d(0, 300px, 0)">
         </div>
     </section>
     <section id="story" class="story">
@@ -28,7 +26,12 @@ get_header();
                     <h3>Le Lieu</h3>
                     <p><?php echo get_theme_mod('place'); ?></p>
                 </div>
-
+                <div class="storyCloud">
+                    <div class="clouds" style="--rightCloud: 0px;">
+                    <img class="bigCloud" src="<?php echo get_stylesheet_directory_uri() . '/asset/images/big_cloud.png' ?>" alt="Gros nuage dans le ciel">
+                    <img class="littleCloud" src="<?php echo get_stylesheet_directory_uri() . '/asset/images/little_cloud.png' ?>" alt="Gros nuage dans le ciel">
+                    </div>
+                </div>
             </article>
         </div>
     </section>

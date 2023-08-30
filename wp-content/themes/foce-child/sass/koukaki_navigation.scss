@@ -1,0 +1,23 @@
+.main-navigation.toggled ul {
+	height: 100vh;
+}
+
+.main-navigation {
+    .site-title-full-nav {
+        display: block;
+    }
+    .site-title {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 700px) {
+
+	.main-navigation {
+		ul {
+			.site-title-full-nav {
+				display: none;
+			}
+		}
+	}
+}
