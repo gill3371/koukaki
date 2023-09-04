@@ -53,6 +53,9 @@
                         <img class="site-title-full-nav random_flower" src="<?php echo get_template_directory_uri() . '/assets/images/random_flower.png'; ?>" alt="Fleur en rotation">
                         <img class="site-title-full-nav flower" src="<?php echo get_template_directory_uri() . '/assets/images/flower.png'; ?>" alt="Fleur rouge en rotation">
                         <img class="site-title-full-nav hibiscus" src="<?php echo get_template_directory_uri() . '/assets/images/Hibiscus.png'; ?>" alt="Fleurs d'hibiscus en rotation">
+                        <img class="site-title-full-nav catBlack" src="<?php echo get_stylesheet_directory_uri() . '/asset/images/black_cat.png'; ?>" alt="Chat noir flottant">
+                        <img class="site-title-full-nav catOrange" src="<?php echo get_stylesheet_directory_uri() . '/asset/images/orange_cat.png'; ?>" alt="Chat noir flottant">
+                        <img class="site-title-full-nav catBlue" src="<?php echo get_stylesheet_directory_uri() . '/asset/images/blue_cat.png'; ?>" alt="Chat noir flottant">
                     </div>
                 </ul>
 

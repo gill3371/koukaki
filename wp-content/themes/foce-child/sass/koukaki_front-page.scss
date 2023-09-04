@@ -14,9 +14,9 @@
         }
         .imgLogo {
             position: absolute;
-            margin-top: -8%;
+            // margin-top: -8%;
             width: 50%;
-            animation: floatingEffect $flowerrotationDuration infinite alternate-reverse linear;
+            animation: floatingEffect $logofloatingDuration linear infinite both;
         }
         .imgBanner {
             display: none;

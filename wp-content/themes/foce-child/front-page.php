@@ -11,7 +11,7 @@ get_header();
                 Your browser does not support HTML5 video.
             </video>
             <img class="imgBanner" src="<?php echo get_stylesheet_directory_uri() . '/asset/images/banner.png' ?>" alt="Image fond bannière Koukaki">
-            <img class="animFloating imgLogo" src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?>" alt="logo Fleurs d'oranger & chats errants" data-bottom-top="transform:translate3d(0, -50px, 0)" data-top-bottom="transform:translate3d(0, 300px, 0)">
+            <img class="animFloating imgLogo" src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?>" alt="logo Fleurs d'oranger & chats errants" data-bottom-top="transform:translate3d(0, -50px, 0)" data-top-bottom="transform:translate3d(0, 50px, 0)">
         </div>
     </section>
     <section id="story" class="story">

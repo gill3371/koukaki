@@ -31,25 +31,46 @@
 				width: 18%;
 			}
 			.random_flower {
-				animation: animFlower $flowerrotationDuration linear  infinite  ;
+				animation: animFlower $flowerrotationDuration linear infinite  ;
 				position: absolute;
 				top: 250px;
 				right: 0%;
 				width: 7%;
 			}
 			.flower {
-				animation: animFlower $flowerrotationDuration linear  infinite  ;
+				animation: animFlower $flowerrotationDuration linear infinite  ;
 				position: absolute;
 				top: 300px;
 				left: 15%;
 				width: 8%;
 			}
 			.hibiscus {
-				animation: animFlower $flowerrotationDuration linear  infinite  ;
+				animation: animFlower $flowerrotationDuration linear infinite  ;
 				position: absolute;
 				right: -25%;
 				top: 600px;
 				width: 50%;
+			}
+			.catBlack {
+				animation: floatingEffect $menucharacDuration 350ms linear infinite  ;
+				position: absolute;
+				top: 330px;
+				right: 45px;
+				width: 15%;
+			}
+			.catOrange {
+				animation: floatingEffect $menucharacDuration linear infinite  ;
+				position: absolute;
+				top: 450px;
+				left: 25px;
+				width: 8%;
+			}
+			.catBlue {
+				animation: floatingEffect $menucharacDuration 800ms linear  infinite  ;
+				position: absolute;
+				top: 200px;
+				left: 85px;
+				width: 12%;
 			}
 		}
 	}
@@ -87,13 +108,6 @@
 		top: 0px;
 	}
 }
-
-// @keyframes closeBuger {
-// 	from {
-// 		.line:nth-child(0)
-
-// 	}	
-// }
 
 .main-navigation {
 		height: 40px;
