@@ -77,10 +77,6 @@ function cloudsPosition(Tag) {
     if (rightClouds > (fenetreWidht * 0.4)) {
       rightClouds = fenetreWidht * 0.4;
     }
-    console.log ("right Clouds = ",rightClouds);
-    console.log("y Clouds = ",yClouds);
-    console.log("fenetre Height = ",fenetreHeight);
-    console.log("fenetre Widht = ",fenetreWidht);
     Tag.setAttribute('style', styleClouds + ': ' + rightClouds + 'px');
   }
 }

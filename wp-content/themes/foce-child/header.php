@@ -37,7 +37,7 @@
                 <ul>
                     <li class="site-title-full-nav">
                         <a href="<?php echo esc_url(home_url('/')); ?>">
-                            <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?>" alt="Logo Koukaki">
+                            <img class="burgerLogo" src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?>" alt="Logo Koukaki">
                         </a>
                     <li><a href="#story">Histoire</a></li>
                     <li><a href="#characters">Personnages</a></li>
@@ -47,6 +47,13 @@
                     </li>
                     <li><a href="#place">Lieu</a></li>
                     <li><a href="#studio">Studio Koukaki</a></li>
+                    <div class="animatedElements">
+                        <img class="site-title-full-nav orchid" src="<?php echo get_template_directory_uri() . '/assets/images/orchid.png'; ?>" alt="Fleur d'orchidée en rotation">
+                        <img class="site-title-full-nav sunflower" src="<?php echo get_template_directory_uri() . '/assets/images/sunflower.png'; ?>" alt="Fleur blanche en rotation">
+                        <img class="site-title-full-nav random_flower" src="<?php echo get_template_directory_uri() . '/assets/images/random_flower.png'; ?>" alt="Fleur en rotation">
+                        <img class="site-title-full-nav flower" src="<?php echo get_template_directory_uri() . '/assets/images/flower.png'; ?>" alt="Fleur rouge en rotation">
+                        <img class="site-title-full-nav hibiscus" src="<?php echo get_template_directory_uri() . '/assets/images/Hibiscus.png'; ?>" alt="Fleurs d'hibiscus en rotation">
+                    </div>
                 </ul>
 
             </nav><!-- #site-navigation -->
