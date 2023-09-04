@@ -44,16 +44,16 @@
 }
 @keyframes floatingEffect {
   0% {
-    transform: translate(24px, 4px);
+    transform: translate(17px, 6px);
   }
   25% {
-    transform: translate(3px, -14px);
+    transform: translate(-6px, -14px);
   }
   50% {
-    transform: translate(-11px, 16px);
+    transform: translate(-5px, -6px);
   }
   75% {
-    transform: translate(-18px, -11px);
+    transform: translate(-25px, -25px);
   }
 }
 .banner {
@@ -228,6 +228,10 @@
   background-color: #FFD5A2;
 }
 .main-navigation.toggled ul {
+  height: 100vh;
+  position: relative;
+  top: -800px;
+  z-index: -2;
   background-color: #FFF5E9;
   display: flex;
   flex-direction: column;
@@ -238,9 +242,6 @@
   padding-top: 50px;
   padding-left: 0;
   animation: animMenu 500ms ease-in-out both;
-}
-.main-navigation.toggled ul .animatedElements {
-  animation: afficheMenu 2000ms linear 100ms both;
 }
 .main-navigation.toggled ul .animatedElements .orchid {
   animation: animFlower 10000ms linear infinite;
@@ -277,6 +278,17 @@
   top: 600px;
   width: 50%;
 }
+.main-navigation.toggled .line:nth-child(1) {
+  transform: rotate(-35deg);
+  transform-origin: right;
+}
+.main-navigation.toggled .line:nth-child(2) {
+  opacity: 0;
+}
+.main-navigation.toggled .line:nth-child(3) {
+  transform: rotate(35deg);
+  transform-origin: right;
+}
 .main-navigation.toggled li {
   font-size: 2em;
 }
@@ -289,18 +301,10 @@
 
 @keyframes animMenu {
   from {
-    height: 0vh;
+    top: -800px;
   }
   to {
-    height: 100vh;
-  }
-}
-@keyframes afficheMenu {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
+    top: 0px;
   }
 }
 .main-navigation {
@@ -320,6 +324,14 @@
 }
 .main-navigation .site-title {
   display: block;
+}
+.main-navigation .line {
+  height: 3px;
+  margin: auto;
+  margin-block: 3px;
+  width: 21px;
+  transition: transform 400ms linear;
+  transition: opacity 200ms linear;
 }
 
 @media screen and (min-width: 700px) {

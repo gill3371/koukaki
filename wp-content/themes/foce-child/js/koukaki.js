@@ -72,11 +72,15 @@ function cloudsPosition(Tag) {
     let yClouds = rectClouds.top;
     let styleClouds = Tag.style[0];
     let fenetreHeight = window.innerHeight;
-    let fenetreWidht = window.innerWidth;
+    // let fenetreWidht = window.innerWidth;
     rightClouds = fenetreHeight * 0.85 - yClouds;
-    if (rightClouds > (fenetreWidht * 0.4)) {
-      rightClouds = fenetreWidht * 0.4;
+    // if (rightClouds > (fenetreWidht * 0.4)) {
+    //   rightClouds = fenetreWidht * 0.4;
+    // }
+    if (rightClouds > 300) {
+      rightClouds = 300;
     }
+    console.log(rightClouds);
     Tag.setAttribute('style', styleClouds + ': ' + rightClouds + 'px');
   }
 }
