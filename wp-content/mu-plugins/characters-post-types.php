@@ -10,7 +10,7 @@ function face_characters_post_types() {
             'name' => 'Personnages',
             'add_new_item' => 'Ajouter un nouveau Personnage',
             'edit_item' => 'Modifier  Personnage',
-            'all_items' => 'Tours les personnages',
+            'all_items' => 'Tous les personnages',
             'singular_name' => 'Personnage'
         ),
         'supports' => array('title', 'thumbnail'),

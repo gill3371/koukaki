@@ -35,31 +35,30 @@ let spanTitleA = document.querySelector(".title_A");
 let spanTitleB = document.querySelector(".title_B");
 let spanStoryTitle = document.querySelector(".storyTitle");
 
+// fonction de test de visibilité de l'élement en paramètre
 function isElementVisible(Element) {
   const rect = Element.getBoundingClientRect();
   const y = rect.top;
   const windowHeight = window.innerHeight;
-
+  
   return y < windowHeight * 0.85;
 }
 
-function animateIfVisible(Element, divElement, className) {
-  if (isElementVisible(Element)) {
-    divElement.classList.add(className);
-  } else {
-    divElement.classList.remove(className);
-  }
+// fonction d'ajout de la class à l'élement de la section 
+function animateIfVisible(element, divElement, className) {
+  divElement.classList.toggle(className, isElementVisible(element));
 }
 
-// Utilisation de la fonction de test et de la fonction d'animation
+// Fonction d'animation des différents éléments ciblés
 function fadeinAnim() {
-  animateIfVisible(sectionBanner, divBanner, "fadeDebutDown");
-  animateIfVisible(sectionStory, divStory, "animDebut");
-  animateIfVisible(sectionStory, spanStoryTitle, "animStoryTitle");
-  animateIfVisible(sectionStudio, divStudio, "animDebut");
-  animateIfVisible(sectionStudio, divStudio, "animDebut");
-  animateIfVisible(sectionStudio, spanTitleA, "animTitle_A");
-  animateIfVisible(sectionStudio, spanTitleB, "animTitle_B");
+  [[sectionBanner, divBanner, "fadeDebutDown"],
+  [sectionStory, divStory, "animDebut"],
+  [sectionStory, spanStoryTitle, "animStoryTitle"], 
+  [sectionStudio, divStudio, "animDebut"],
+  [sectionStudio, divStudio, "animDebut"],
+  [sectionStudio, spanTitleA, "animTitle_A"],
+  [sectionStudio, spanTitleB, "animTitle_B"]]
+  .forEach((Elements) => animateIfVisible(Elements[0],Elements[1],Elements[2]));
 }
 
 // Modification de la position des nuages lors du scroll
@@ -69,28 +68,27 @@ let rightClouds = 0;
 function cloudsPosition(Tag) {
   if (isElementVisible(Tag)) {
     let rectClouds = Tag.getBoundingClientRect();
-    let yClouds = rectClouds.top;
-    let styleClouds = Tag.style[0];
+    let yClouds = rectClouds.top; // Position de l'élement Tag par rapport au haut du viewport
+    let styleClouds = Tag.style[0]; //Récuration du style définit dans la balise HTML
     let fenetreHeight = window.innerHeight;
-    // let fenetreWidht = window.innerWidth;
-    rightClouds = fenetreHeight * 0.85 - yClouds;
-    // if (rightClouds > (fenetreWidht * 0.4)) {
-    //   rightClouds = fenetreWidht * 0.4;
-    // }
+    rightClouds = fenetreHeight * 0.85 - yClouds; //Définition de la position du nuage
     if (rightClouds > 300) {
       rightClouds = 300;
-    }
-    console.log(rightClouds);
+    } // Test pour limiter le mouvement du nuage
     Tag.setAttribute('style', styleClouds + ': ' + rightClouds + 'px');
-  }
+  } // Modification de la veleur du style dans la balise HTML
 }
 
 function cloudsAnim() {
   cloudsPosition (divClouds);
 }
 
-["load", "resize", "scroll"].forEach((events) => window.addEventListener(events, fadeinAnim));
-["load", "resize", "scroll"].forEach((evenements) => window.addEventListener(evenements, cloudsAnim));
+["load", "resize", "scroll"].forEach((event) => {
+  window.addEventListener(event, () => {
+    fadeinAnim();
+    cloudsAnim();
+  });
+});
 
 // Masquage du menu mobile lors du clic
 const Navigation = document.querySelector("#site-navigation");
@@ -100,39 +98,3 @@ fullNav.addEventListener("click", function () {
   Navigation.classList.remove("toggled");
   button.setAttribute("aria-expanded", "false");
 });
-
-// function fadeinAnim() {
-//     let bannerRect = sectionBanner.getBoundingClientRect();
-//     let bannerY = bannerRect.top;
-//     let storyRect = sectionStory.getBoundingClientRect();
-//     let storyY = storyRect.top;
-//     let studioRect = sectionStudio.getBoundingClientRect();
-//     let studioY = studioRect.top;
-//     let windowHeight = window.innerHeight;
-//     // let windowScroll = window.scrollY;
-//     // console.log("position élément= ",storyY);
-//     // console.log("hauteur fenêtre= ",windowHeight);
-//     // console.log("top= ",windowScroll);
-//     if (bannerY < (windowHeight * .85)) {
-//         divBanner.classList.add('fadeDebutDown');
-//     }
-//     else {
-//         sectionBanner.classList.remove('fadeDebutDown');
-//     }
-//     if (storyY < (windowHeight * .85)) {
-//         divStory.classList.add('animDebut');
-//     }
-//     else {
-//         divStory.classList.remove('animDebut');
-//     }
-//     if (studioY < (windowHeight * .85)) {
-//         divStudio.classList.add('animDebut');
-//     }
-//     else {
-//         divStudio.classList.remove('animDebut');
-//     }
-// }
-
-// // window.addEventListener('load',fadeinAnimOK);
-// // window.addEventListener('resize',fadeinAnimOK);
-// // window.addEventListener('scroll',fadeinAnimOK);

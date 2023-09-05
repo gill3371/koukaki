@@ -304,7 +304,7 @@
   width: 8%;
 }
 .main-navigation.toggled ul .animatedElements .catBlue {
-  animation: floatingEffect 5000ms 800ms linear infinite;
+  animation: floatingEffect 5000ms 0ms linear infinite;
   position: absolute;
   top: 200px;
   left: 85px;
@@ -342,8 +342,13 @@
 .main-navigation {
   height: 40px;
 }
+.main-navigation a {
+  text-align: center;
+  padding-top: 10px;
+}
 .main-navigation button {
   position: absolute;
+  top: 0px;
   right: 0px;
 }
 .main-navigation .site-title-full-nav {
@@ -367,8 +372,17 @@
 }
 
 @media screen and (min-width: 700px) {
-  .main-navigation ul .site-title-full-nav {
+  .menu-toggle {
+    display: block;
+  }
+  .main-navigation {
+    height: 40px;
+  }
+  .main-navigation ul {
     display: none;
+  }
+  .main-navigation ul .site-title {
+    display: block;
   }
 }
 

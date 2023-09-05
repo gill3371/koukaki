@@ -66,7 +66,7 @@
 				width: 8%;
 			}
 			.catBlue {
-				animation: floatingEffect $menucharacDuration 800ms linear  infinite  ;
+				animation: floatingEffect $menucharacDuration 00ms linear  infinite  ;
 				position: absolute;
 				top: 200px;
 				left: 85px;
@@ -111,8 +111,13 @@
 
 .main-navigation {
 		height: 40px;
+	a {
+		text-align: center;
+		padding-top: 10px;
+	}
 	button {
 		position: absolute;
+		top: 0px;
 		right: 0px;
 	}
     .site-title-full-nav {
@@ -136,13 +141,20 @@
 	}
 }
 
-@media screen and (min-width: 700px) {
 
+@media screen and (min-width:700px) {
+
+	.menu-toggle {
+		display: block;
+	}
 	.main-navigation {
+		height: 40px;
 		ul {
-			.site-title-full-nav {
-				display: none;
+			display: none;
+			.site-title {
+				display: block;
 			}
 		}
 	}
+
 }
