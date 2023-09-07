@@ -68,15 +68,15 @@ let rightClouds = 0;
 function cloudsPosition(Tag) {
   if (isElementVisible(Tag)) {
     let rectClouds = Tag.getBoundingClientRect();
-    let yClouds = rectClouds.top; // Position de l'élement Tag par rapport au haut du viewport
-    let styleClouds = Tag.style[0]; //Récuration du style définit dans la balise HTML
+    let yClouds = rectClouds.top; 
+    let styleClouds = Tag.style[0]; 
     let fenetreHeight = window.innerHeight;
     rightClouds = fenetreHeight * 0.85 - yClouds; //Définition de la position du nuage
     if (rightClouds > 300) {
       rightClouds = 300;
     } // Test pour limiter le mouvement du nuage
     Tag.setAttribute('style', styleClouds + ': ' + rightClouds + 'px');
-  } // Modification de la veleur du style dans la balise HTML
+  }
 }
 
 function cloudsAnim() {
