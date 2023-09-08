@@ -45,6 +45,16 @@
     to { rotate: (360deg);
     }    
   }
+
+
+@keyframes animMenu {
+	from {
+		top: -800px;
+	}
+	to {
+		top: 0px;
+	}
+}
   
   @keyframes floatingEffect {
     12% {

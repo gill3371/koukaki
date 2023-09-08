@@ -63,7 +63,7 @@ function fadeinAnim() {
 
 // Modification de la position des nuages lors du scroll
 let divClouds = document.querySelector(".clouds");
-let rightClouds = 0;
+let rightClouds;
 
 function cloudsPosition(Tag) {
   if (isElementVisible(Tag)) {
@@ -71,9 +71,9 @@ function cloudsPosition(Tag) {
     let yClouds = rectClouds.top; 
     let styleClouds = Tag.style[0]; 
     let fenetreHeight = window.innerHeight;
-    rightClouds = fenetreHeight * 0.85 - yClouds; //Définition de la position du nuage
-    if (rightClouds > 300) {
-      rightClouds = 300;
+    rightClouds = 50 + (fenetreHeight * 0.85 - yClouds) * 0.5; //Définition de la position du nuage
+    if (rightClouds > 350) {
+      rightClouds = 350;
     } // Test pour limiter le mouvement du nuage
     Tag.setAttribute('style', styleClouds + ': ' + rightClouds + 'px');
   }

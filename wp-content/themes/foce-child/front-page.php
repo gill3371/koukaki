@@ -27,7 +27,7 @@ get_header();
                     <p><?php echo get_theme_mod('place'); ?></p>
                 </div>
                 <div class="storyCloud">
-                    <div class="clouds" style="--rightCloud: 0px;">
+                    <div class="clouds" style="--rightCloud: 50px;">
                     <img class="bigCloud" src="<?php echo get_stylesheet_directory_uri() . '/asset/images/big_cloud.png' ?>" alt="Gros nuage dans le ciel">
                     <img class="littleCloud" src="<?php echo get_stylesheet_directory_uri() . '/asset/images/little_cloud.png' ?>" alt="Gros nuage dans le ciel">
                     </div>

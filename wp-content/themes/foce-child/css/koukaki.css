@@ -42,6 +42,14 @@
     rotate: 360deg;
   }
 }
+@keyframes animMenu {
+  from {
+    top: -800px;
+  }
+  to {
+    top: 0px;
+  }
+}
 @keyframes floatingEffect {
   12% {
     transform: translate(10px, 10px);
@@ -157,7 +165,7 @@
 }
 .story #place .littleCloud {
   position: absolute;
-  right: 250px;
+  right: 350px;
   top: 150px;
 }
 
@@ -331,14 +339,6 @@
   color: white;
 }
 
-@keyframes animMenu {
-  from {
-    top: -800px;
-  }
-  to {
-    top: 0px;
-  }
-}
 .main-navigation {
   height: 40px;
 }
